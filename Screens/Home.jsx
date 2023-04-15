@@ -4,10 +4,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Button } from "react-native";
 
- import PostScreen from "./mainScreen/PostsScreen";
-// import DefaultScreenPost from "./defaultScreen/DefaultScreen";
-import CreatePostScreen from "./mainScreen/CreatePostsScreen";
-import ProfileScreen from "./mainScreen/ProfileScreen";
+ import PostScreen from "./homeScreen/PostsScreen";
+import CreatePostScreen from "./homeScreen/CreatePostsScreen";
+import ProfileScreen from "./homeScreen/ProfileScreen";
 
 const Tabs = createBottomTabNavigator();
 

@@ -1,24 +1,19 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
 
-import RegistrationScreen from './Screens/RegistrationScreen';
-import LoginScreen from './Screens/LoginScreen';
-import Home from "./Screens/Home";
-
-const MainStack = createStackNavigator();
-
+import { Provider} from "react-redux";
+import {store , persistore} from "./Redux/store.js"
+import { PersistGate } from "redux-persist/integration/react";
+import { useState } from "react";
+import Main from "./Screens/Main";
+ 
 export default function App() {
-  
+  const[user,setUser]=useState(null)
+
   return (
-    <NavigationContainer>
-      <MainStack.Navigator>
-       
-      <MainStack.Screen name="Login" component={LoginScreen} options={{headerShown:false}} />
-      <MainStack.Screen name="Registration" component={RegistrationScreen} options={{headerShown:false}}/>
-      <MainStack.Screen name="Home" component={Home} options={{headerShown:false}}/> 
-      
-    </MainStack.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      {/* <PersistGate persistor={persistore} loading={null}> */}
+      <Main/>
+      {/* </PersistGate> */}
+    </Provider>
   );
 }
 

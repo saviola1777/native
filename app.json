@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "Native",
-    "slug": "Native",
+    "name": "NativeProject",
+    "slug": "Native-Draganchuk",
+    "description":"This is create app.",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/phone-wallpaper-g161da7d3c_640.jpg",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -14,17 +15,20 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "jsEngine": "hermes",
     "ios": {
+      "jsEngine": "jsc",
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/phone-wallpaper-g161da7d3c_640.jpg",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
     }
-  }
+  },
+  "name": "native"
 }

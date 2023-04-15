@@ -4,27 +4,22 @@ import MapView, { Marker } from 'react-native-maps';
 import React, { useState, useEffect } from "react";
 
 const MapScreen = ({ route }) => {
-   const [location, setLocation] = useState(null);
-   console.log("MapLocation", location)
-   useEffect(() => {
-      if (route.params) {
-         setLocation(route.params.location)
-      }
-   }, [route.params])
+  const {latitude , longitude} = route.params.location 
+  console.log("latitude , longitude", latitude , longitude)
    return (
-
+ 
       <MapView
          style={styles.mapStyle}
          region={{
-            latitude: 37.4220936,
-            longitude: -122.083922,
+            latitude,
+            longitude,
             latitudeDelta: 0.01,
             longitudeDelta: 0.01,
          }}
       >
          <Marker
             title="Dubno"
-            coordinate={{ latitude: 37.4220936, longitude: -122.083922 }}
+            coordinate={{ latitude, longitude}}
             description='Location on my city'
          />
       </MapView>
